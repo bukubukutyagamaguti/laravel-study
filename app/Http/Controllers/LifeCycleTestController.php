@@ -12,7 +12,7 @@ class LifeCycleTestController extends Controller
         $encrypt = app()->make('encrypter');
         $password = $encrypt->encrypt('password');
         
-        $sample = app()->make();
+        $sample = app()->make('sampleService');
         dd($sample, $password, $encrypt->decrypt($password));
     }
 
